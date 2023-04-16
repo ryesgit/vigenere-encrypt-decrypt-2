@@ -43,3 +43,5 @@ while True:
             continue
         
         window['value'].update(decrypted_message)
+
+window.close()
