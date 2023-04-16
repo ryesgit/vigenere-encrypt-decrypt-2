@@ -44,4 +44,15 @@ while True:
         
         window['value'].update(decrypted_message)
 
+    if event == 'Encrypt':
+        encrypted_message = encrypt(values['input'], values['key'])
+
+        if window['decode-or-encode'].get() == '' or window['decode-or-encode'].get() == 'Decoded Message: ':
+            window['decode-or-encode'].update('Encoded Message: ')
+            window['value'].update(encrypted_message)
+            window['Copy'].update(visible=True)
+            continue
+
+        window['value'].update(encrypted_message)
+
 window.close()
