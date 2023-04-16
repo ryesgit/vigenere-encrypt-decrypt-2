@@ -26,3 +26,21 @@ def encrypt(text, key):
 
     text = text.lower()
     key = key.lower()
+
+    # Take the numerical counterparts of both TEXT and KEY.
+    
+    numberified_text = convert_to_num(text)
+    numberified_keys = convert_to_num(key)
+
+def convert_to_num(text):
+    text_to_num = []
+
+    for letter in text:
+
+        if letter.isalpha():
+            text_to_num.append(TEXT_KEYS[letter])
+
+        else:
+            text_to_num.append(letter)
+
+    return text_to_num
