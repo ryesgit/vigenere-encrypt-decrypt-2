@@ -45,6 +45,10 @@ def encrypt(text, key):
         else:
             resultant_num.append(text_num + numberified_keys[text_index])
 
+    encrypted_word = convert_to_text(resultant_num)
+
+    return encrypted_word.upper()
+
 def convert_to_num(text):
     text_to_num = []
 
@@ -57,3 +61,20 @@ def convert_to_num(text):
             text_to_num.append(letter)
 
     return text_to_num
+
+# Number to text converter
+def convert_to_text(resultant_num):
+    completed_word = ''
+
+    for num in resultant_num:
+        # If character is not a string, retain
+        if (not str(num).isdigit()):
+            completed_word += num
+
+        elif(num > 25):
+            completed_word += NUM_KEYS[(num % 26)]
+
+        else:
+            completed_word += NUM_KEYS[num]
+
+    return completed_word
