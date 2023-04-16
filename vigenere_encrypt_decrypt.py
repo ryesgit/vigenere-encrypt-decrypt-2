@@ -55,6 +55,11 @@ def decrypt(text, key):
     text = text.lower()
     key = key.lower()
 
+    # Take the numerical counterparts of both TEXT and KEY.
+
+    numberified_text = convert_to_num(text)
+    numberified_key = convert_to_num(key)
+
 def convert_to_num(text):
     text_to_num = []
 
