@@ -76,6 +76,10 @@ def decrypt(text, key):
             difference = (num - numberified_key[index]) + 26
             resultant_num.append(difference)
 
+    decrypted_word = convert_to_text(resultant_num)    
+
+    return decrypted_word.upper()
+
 def convert_to_num(text):
     text_to_num = []
 
