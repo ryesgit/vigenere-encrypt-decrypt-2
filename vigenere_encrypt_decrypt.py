@@ -60,6 +60,11 @@ def decrypt(text, key):
     numberified_text = convert_to_num(text)
     numberified_key = convert_to_num(key)
 
+    for (index, num) in enumerate(numberified_text):
+        # Retain spaces
+        if (str(num).isspace()):
+            resultant_num.append(' ')
+
 def convert_to_num(text):
     text_to_num = []
 
