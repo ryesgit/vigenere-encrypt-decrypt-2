@@ -49,6 +49,12 @@ def encrypt(text, key):
 
     return encrypted_word.upper()
 
+def decrypt(text, key):
+    resultant_num = []
+
+    text = text.lower()
+    key = key.lower()
+
 def convert_to_num(text):
     text_to_num = []
 
