@@ -14,3 +14,12 @@ layout = [
 ]
 
 window = sg.Window(title, layout, element_justification='center')
+
+while True:
+    event, values = window.read()
+
+    if event == 'Quit' or event == sg.WIN_CLOSED:
+        break
+
+    if event == 'Copy':
+        sg.clipboard_set(window['value'].get())
