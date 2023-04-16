@@ -71,6 +71,11 @@ def decrypt(text, key):
             difference = (num - numberified_key[offset]) + 26
             resultant_num.append(difference)
 
+        # If key length > text length, execute only until text is traversed
+        else:
+            difference = (num - numberified_key[index]) + 26
+            resultant_num.append(difference)
+
 def convert_to_num(text):
     text_to_num = []
 
