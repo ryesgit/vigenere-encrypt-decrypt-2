@@ -1,4 +1,5 @@
 import PySimpleGUI as sg
+from vigenere_encrypt_decrypt import encrypt, decrypt
 
 sg.theme('DarkBlue')
 
@@ -31,3 +32,14 @@ while True:
     if (event == 'Encrypt' or event == 'Decrypt') and (values['input'] == '' or values['key'] == ''):
         sg.popup('Text and key must be filled first!', non_blocking=True)
         continue
+
+    if event == 'Decrypt':
+        decrypted_message = decrypt(values['input'], values['key'])
+
+        if window['decode-or-encode'].get() == '' or window['decode-or-encode'].get() == 'Encoded Message: ':
+            window['decode-or-encode'].update('Decoded Message: ')
+            window['value'].update(decrypted_message)
+            window['Copy'].update(visible=True)
+            continue
+        
+        window['value'].update(decrypted_message)
