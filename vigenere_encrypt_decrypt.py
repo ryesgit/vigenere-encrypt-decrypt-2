@@ -65,6 +65,12 @@ def decrypt(text, key):
         if (str(num).isspace()):
             resultant_num.append(' ')
 
+        # If text length > key length, always go back to key length[0]
+        elif(index + 1 > len(numberified_key)):
+            offset = index % len(numberified_key)
+            difference = (num - numberified_key[offset]) + 26
+            resultant_num.append(difference)
+
 def convert_to_num(text):
     text_to_num = []
 
