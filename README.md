@@ -21,4 +21,11 @@ Moreover, this program allows for decryption of Vigenére-encrypted characters.
 4. Add 26 (the length of the dictionary) to difference so as to normalize number (because some of them has been offset during encryption)
 5. Convert number set to string
 
+## To Clone This To Your Machine...
+```
+git clone https://github.com/ryesgit/vigenere-encrypt-decrypt-2/
+cd vigenere-encrypt-decrypt-2/
+pip install -r requirements.txt
+```
+
 *This is a replica of the first vigenere-encrypt-decrypt, the only difference is that this one has better commit messages.*
