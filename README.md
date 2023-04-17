@@ -18,9 +18,7 @@ Moreover, this program allows for decryption of Vigenére-encrypted characters.
 1. Take a string to decrypt, and a key from which we will base our decryption
 2. Take the numerical counterparts of both TEXT and KEY
 3. Subtract their numerical counterparts the same method as encryption
-    - If the difference results to a negative number, add length of dictionary
-    - If the number is neither larger than dict length nor below 0, retain
-    - If the number is larger than dict length, take modulus of result and dict length
-4. Convert number set to string
+4. Add 26 (the length of the dictionary) to difference so as to normalize number (because some of them has been offset during encryption)
+5. Convert number set to string
 
 *This is a replica of the first vigenere-encrypt-decrypt, the only difference is that this one has better commit messages.*
